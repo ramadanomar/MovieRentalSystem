@@ -61,11 +61,29 @@
     <Compile Include="ActionForm.Designer.cs">
       <DependentUpon>ActionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCategory.Designer.cs">
+      <DependentUpon>ManageCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMovie.Designer.cs">
+      <DependentUpon>ManageMovie.cs</DependentUpon>
     </Compile>
     <Compile Include="MMSAdmin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -102,8 +120,17 @@
     <EmbeddedResource Include="ActionForm.resx">
       <DependentUpon>ActionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCategory.resx">
+      <DependentUpon>ManageCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMovie.resx">
+      <DependentUpon>ManageMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

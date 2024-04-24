@@ -243,7 +243,7 @@
             // imdbLabel
             // 
             this.imdbLabel.AutoSize = true;
-            this.imdbLabel.Location = new System.Drawing.Point(445, 107);
+            this.imdbLabel.Location = new System.Drawing.Point(445, 103);
             this.imdbLabel.Name = "imdbLabel";
             this.imdbLabel.Size = new System.Drawing.Size(73, 13);
             this.imdbLabel.TabIndex = 11;
@@ -251,7 +251,7 @@
             // 
             // newIMDbNumber
             // 
-            this.newIMDbNumber.Location = new System.Drawing.Point(527, 107);
+            this.newIMDbNumber.Location = new System.Drawing.Point(527, 103);
             this.newIMDbNumber.Name = "newIMDbNumber";
             this.newIMDbNumber.Size = new System.Drawing.Size(100, 20);
             this.newIMDbNumber.TabIndex = 12;
