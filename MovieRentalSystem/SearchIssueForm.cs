@@ -12,9 +12,26 @@ namespace MovieRentalSystem
 {
     public partial class SearchIssueForm : Form
     {
+        MMSEntities context = new MMSEntities();
+
         public SearchIssueForm()
         {
             InitializeComponent();
+            searchMovieCategoryComboBox.DataSource = context.Categories.ToList();
+            searchMovieCategoryComboBox.DisplayMember = "Title";
+        }
+
+        private void SearchIssueForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'mMSDataSet.Movie' table. You can move, or remove it, as needed.
+            this.movieTableAdapter.Fill(this.mMSDataSet.Movie);
+
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            var Movies = context.Movies.Where(x => x.Title == movieTitleTextBox.Text || x.Category == searchMovieCategoryComboBox.Text).ToList();
+            resultGrid.DataSource = Movies;
         }
     }
 }

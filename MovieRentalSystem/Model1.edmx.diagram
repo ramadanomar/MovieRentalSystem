@@ -6,6 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="3b6cbf0cfdb34c3fa97513a4440e97a6" Name="Diagram1">
         <EntityTypeShape EntityType="MMSModel.MMSAdmin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMSModel.Movie" Width="1.5" PointX="3.375" PointY="0.875" />
+        <EntityTypeShape EntityType="MMSModel.Category" Width="1.5" PointX="7.625" PointY="1.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

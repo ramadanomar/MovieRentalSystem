@@ -61,6 +61,9 @@
     <Compile Include="ActionForm.Designer.cs">
       <DependentUpon>ActionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,20 +76,25 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageCategory.cs">
+    <Compile Include="ManageCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageCategory.Designer.cs">
-      <DependentUpon>ManageCategory.cs</DependentUpon>
+    <Compile Include="ManageCategoryForm.Designer.cs">
+      <DependentUpon>ManageCategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageMovie.cs">
+    <Compile Include="ManageMovieForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageMovie.Designer.cs">
-      <DependentUpon>ManageMovie.cs</DependentUpon>
+    <Compile Include="ManageMovieForm.Designer.cs">
+      <DependentUpon>ManageMovieForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MMSAdmin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MMSDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -102,6 +110,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Movie.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,11 +137,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageCategory.resx">
-      <DependentUpon>ManageCategory.cs</DependentUpon>
+    <EmbeddedResource Include="ManageCategoryForm.resx">
+      <DependentUpon>ManageCategoryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageMovie.resx">
-      <DependentUpon>ManageMovie.cs</DependentUpon>
+    <EmbeddedResource Include="ManageMovieForm.resx">
+      <DependentUpon>ManageMovieForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,6 +162,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="MMSDataSet.xsc">
+      <DependentUpon>MMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MMSDataSet.xss">
+      <DependentUpon>MMSDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

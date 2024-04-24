@@ -1,6 +1,6 @@
 ﻿namespace MovieRentalSystem
 {
-    partial class ManageMovie
+    partial class ManageMovieForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.movieCategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.addButton = new System.Windows.Forms.Button();
+            this.newIMDbNumber = new System.Windows.Forms.TextBox();
+            this.imdbLabel = new System.Windows.Forms.Label();
             this.newQuantityTextBox = new System.Windows.Forms.TextBox();
-            this.newPublicationTitle = new System.Windows.Forms.TextBox();
+            this.newPublicationTitleTextBox = new System.Windows.Forms.TextBox();
             this.newMovieTitleTextBox = new System.Windows.Forms.TextBox();
             this.movieCategoryLabel = new System.Windows.Forms.Label();
             this.quantityLabel = new System.Windows.Forms.Label();
             this.publicationLabel = new System.Windows.Forms.Label();
             this.movieTitleLabel = new System.Windows.Forms.Label();
-            this.newIMDbNumber = new System.Windows.Forms.TextBox();
-            this.imdbLabel = new System.Windows.Forms.Label();
-            this.addButton = new System.Windows.Forms.Button();
-            this.movieCategoryComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.removeMovieCategoryTextBox = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.removeRvQuantityTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.removeButton = new System.Windows.Forms.Button();
             this.removeIMDbNumberTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,12 +56,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.removeRvQuantityTextBox = new System.Windows.Forms.TextBox();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.removeMovieCategoryTextBox = new System.Windows.Forms.TextBox();
+            this.mMSDataSet = new MovieRentalSystem.MMSDataSet();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryTableAdapter = new MovieRentalSystem.MMSDataSetTableAdapters.CategoryTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mMSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -66,7 +72,7 @@
             this.groupBox1.Controls.Add(this.newIMDbNumber);
             this.groupBox1.Controls.Add(this.imdbLabel);
             this.groupBox1.Controls.Add(this.newQuantityTextBox);
-            this.groupBox1.Controls.Add(this.newPublicationTitle);
+            this.groupBox1.Controls.Add(this.newPublicationTitleTextBox);
             this.groupBox1.Controls.Add(this.newMovieTitleTextBox);
             this.groupBox1.Controls.Add(this.movieCategoryLabel);
             this.groupBox1.Controls.Add(this.quantityLabel);
@@ -79,6 +85,40 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Movie";
             // 
+            // movieCategoryComboBox
+            // 
+            this.movieCategoryComboBox.FormattingEnabled = true;
+            this.movieCategoryComboBox.Location = new System.Drawing.Point(127, 80);
+            this.movieCategoryComboBox.Name = "movieCategoryComboBox";
+            this.movieCategoryComboBox.Size = new System.Drawing.Size(221, 21);
+            this.movieCategoryComboBox.TabIndex = 20;
+            // 
+            // addButton
+            // 
+            this.addButton.Location = new System.Drawing.Point(390, 132);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(333, 29);
+            this.addButton.TabIndex = 19;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // newIMDbNumber
+            // 
+            this.newIMDbNumber.Location = new System.Drawing.Point(434, 81);
+            this.newIMDbNumber.Name = "newIMDbNumber";
+            this.newIMDbNumber.Size = new System.Drawing.Size(289, 20);
+            this.newIMDbNumber.TabIndex = 18;
+            // 
+            // imdbLabel
+            // 
+            this.imdbLabel.AutoSize = true;
+            this.imdbLabel.Location = new System.Drawing.Point(355, 84);
+            this.imdbLabel.Name = "imdbLabel";
+            this.imdbLabel.Size = new System.Drawing.Size(73, 13);
+            this.imdbLabel.TabIndex = 17;
+            this.imdbLabel.Text = "IMDb Number";
+            // 
             // newQuantityTextBox
             // 
             this.newQuantityTextBox.Location = new System.Drawing.Point(127, 137);
@@ -86,12 +126,12 @@
             this.newQuantityTextBox.Size = new System.Drawing.Size(221, 20);
             this.newQuantityTextBox.TabIndex = 15;
             // 
-            // newPublicationTitle
+            // newPublicationTitleTextBox
             // 
-            this.newPublicationTitle.Location = new System.Drawing.Point(434, 36);
-            this.newPublicationTitle.Name = "newPublicationTitle";
-            this.newPublicationTitle.Size = new System.Drawing.Size(289, 20);
-            this.newPublicationTitle.TabIndex = 14;
+            this.newPublicationTitleTextBox.Location = new System.Drawing.Point(434, 36);
+            this.newPublicationTitleTextBox.Name = "newPublicationTitleTextBox";
+            this.newPublicationTitleTextBox.Size = new System.Drawing.Size(289, 20);
+            this.newPublicationTitleTextBox.TabIndex = 14;
             // 
             // newMovieTitleTextBox
             // 
@@ -136,39 +176,6 @@
             this.movieTitleLabel.TabIndex = 9;
             this.movieTitleLabel.Text = "Movie Title";
             // 
-            // newIMDbNumber
-            // 
-            this.newIMDbNumber.Location = new System.Drawing.Point(434, 81);
-            this.newIMDbNumber.Name = "newIMDbNumber";
-            this.newIMDbNumber.Size = new System.Drawing.Size(289, 20);
-            this.newIMDbNumber.TabIndex = 18;
-            // 
-            // imdbLabel
-            // 
-            this.imdbLabel.AutoSize = true;
-            this.imdbLabel.Location = new System.Drawing.Point(355, 84);
-            this.imdbLabel.Name = "imdbLabel";
-            this.imdbLabel.Size = new System.Drawing.Size(73, 13);
-            this.imdbLabel.TabIndex = 17;
-            this.imdbLabel.Text = "IMDb Number";
-            // 
-            // addButton
-            // 
-            this.addButton.Location = new System.Drawing.Point(390, 132);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(333, 29);
-            this.addButton.TabIndex = 19;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = true;
-            // 
-            // movieCategoryComboBox
-            // 
-            this.movieCategoryComboBox.FormattingEnabled = true;
-            this.movieCategoryComboBox.Location = new System.Drawing.Point(127, 80);
-            this.movieCategoryComboBox.Name = "movieCategoryComboBox";
-            this.movieCategoryComboBox.Size = new System.Drawing.Size(221, 21);
-            this.movieCategoryComboBox.TabIndex = 20;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.removeMovieCategoryTextBox);
@@ -192,14 +199,50 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Remove Movie";
             // 
+            // removeMovieCategoryTextBox
+            // 
+            this.removeMovieCategoryTextBox.Location = new System.Drawing.Point(99, 151);
+            this.removeMovieCategoryTextBox.Name = "removeMovieCategoryTextBox";
+            this.removeMovieCategoryTextBox.ReadOnly = true;
+            this.removeMovieCategoryTextBox.Size = new System.Drawing.Size(290, 20);
+            this.removeMovieCategoryTextBox.TabIndex = 24;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(409, 35);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(109, 21);
+            this.searchButton.TabIndex = 23;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // removeRvQuantityTextBox
+            // 
+            this.removeRvQuantityTextBox.Location = new System.Drawing.Point(99, 233);
+            this.removeRvQuantityTextBox.Name = "removeRvQuantityTextBox";
+            this.removeRvQuantityTextBox.Size = new System.Drawing.Size(288, 20);
+            this.removeRvQuantityTextBox.TabIndex = 22;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 236);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Rv. Quantity";
+            // 
             // removeButton
             // 
+            this.removeButton.Enabled = false;
             this.removeButton.Location = new System.Drawing.Point(22, 283);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(365, 29);
             this.removeButton.TabIndex = 19;
             this.removeButton.Text = "Remove";
             this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // removeIMDbNumberTextBox
             // 
@@ -277,52 +320,36 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Movie Title";
             // 
-            // label6
+            // mMSDataSet
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 236);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Rv. Quantity";
+            this.mMSDataSet.DataSetName = "MMSDataSet";
+            this.mMSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // removeRvQuantityTextBox
+            // categoryBindingSource
             // 
-            this.removeRvQuantityTextBox.Location = new System.Drawing.Point(99, 233);
-            this.removeRvQuantityTextBox.Name = "removeRvQuantityTextBox";
-            this.removeRvQuantityTextBox.Size = new System.Drawing.Size(288, 20);
-            this.removeRvQuantityTextBox.TabIndex = 22;
+            this.categoryBindingSource.DataMember = "Category";
+            this.categoryBindingSource.DataSource = this.mMSDataSet;
             // 
-            // searchButton
+            // categoryTableAdapter
             // 
-            this.searchButton.Location = new System.Drawing.Point(409, 35);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(109, 21);
-            this.searchButton.TabIndex = 23;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.categoryTableAdapter.ClearBeforeFill = true;
             // 
-            // removeMovieCategoryTextBox
-            // 
-            this.removeMovieCategoryTextBox.Location = new System.Drawing.Point(99, 151);
-            this.removeMovieCategoryTextBox.Name = "removeMovieCategoryTextBox";
-            this.removeMovieCategoryTextBox.ReadOnly = true;
-            this.removeMovieCategoryTextBox.Size = new System.Drawing.Size(290, 20);
-            this.removeMovieCategoryTextBox.TabIndex = 24;
-            // 
-            // ManageMovie
+            // ManageMovieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 744);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "ManageMovie";
+            this.Name = "ManageMovieForm";
             this.Text = "Manage Movie";
+            this.Load += new System.EventHandler(this.ManageMovieForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mMSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,7 +358,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox newQuantityTextBox;
-        private System.Windows.Forms.TextBox newPublicationTitle;
+        private System.Windows.Forms.TextBox newPublicationTitleTextBox;
         private System.Windows.Forms.TextBox newMovieTitleTextBox;
         private System.Windows.Forms.Label movieCategoryLabel;
         private System.Windows.Forms.Label quantityLabel;
@@ -356,5 +383,8 @@
         private System.Windows.Forms.TextBox removeRvQuantityTextBox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.TextBox removeMovieCategoryTextBox;
+        private MMSDataSet mMSDataSet;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
+        private MMSDataSetTableAdapters.CategoryTableAdapter categoryTableAdapter;
     }
 }
