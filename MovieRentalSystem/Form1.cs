@@ -17,9 +17,48 @@ namespace MovieRentalSystem
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
+            MMSEntities content = new MMSEntities();
 
-        }
+            String inputUsername = null;
+            String inputPassword = null;
+
+            if (usernameTextBox.Text != string.Empty)
+            {
+                inputUsername = usernameTextBox.Text;
+            } else
+            {
+                MessageBox.Show("Username not filled!");
+                return;
+            }
+
+            if (passwordTextBox.Text != string.Empty)
+            {
+                inputPassword = passwordTextBox.Text;
+            } else
+            {
+                MessageBox.Show("Password not found!");
+                return;
+            }
+
+            var user = content.MMSAdmins.Where(x => x.Username.Equals(usernameTextBox.Text)).FirstOrDefault();
+
+            if (user != null)
+            {
+                inputPassword = inputPassword.PadRight(50, ' ');
+                if (user.Password.Equals(inputPassword))
+                {
+                    MessageBox.Show("Logged In");
+                } else
+                {
+                    MessageBox.Show("Invalid Password!");
+                }
+            } else
+            {
+                MessageBox.Show("User not found!");
+            }
+
+           }
     }
 }
