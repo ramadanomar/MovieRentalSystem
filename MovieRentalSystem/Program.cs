@@ -16,7 +16,7 @@ namespace MovieRentalSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SearchRentalForm());
+            Application.Run(new MainForm());
         }
     }
 }
