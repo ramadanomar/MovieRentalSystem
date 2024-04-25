@@ -28,5 +28,6 @@ namespace MovieRentalSystem
         public virtual DbSet<MMSAdmin> MMSAdmins { get; set; }
         public virtual DbSet<Movie> Movies { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Rental> Rentals { get; set; }
     }
 }
